@@ -1,0 +1,47 @@
+.auth{
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+.title_from_auth{
+    text-transform: uppercase;
+    color: #ba4343;
+    text-align: center;
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
+}
+.Icon-Prefix__Color{
+    color: #ba4343;
+}
+.error_message{
+    text-align: center;
+    text-transform: capitalize;
+    color: red;
+}
+.Txt__SwitchSign{
+    margin-top: 8px;
+    text-align: right;
+    text-decoration: underline;
+    color: #ba4343;
+    cursor: pointer;
+}
+.button{
+    background-color: #d88282;
+    border-color: #d88282;
+}
+.button:hover, .button:focus {
+    color: #fff;
+    background-color: #eda8a8;
+    border-color: #d88282;
+}
+@media (min-width: 600px){
+    .auth{
+        width: 500px;
+    }
+}

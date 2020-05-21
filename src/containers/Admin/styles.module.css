@@ -1,0 +1,31 @@
+.admin {
+  margin-top: 65px;
+  display: flex;
+  height: calc(100vh - 65px);
+  border-width: 1;
+  border: black;
+}
+.siderBar {
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+}
+.menu{
+
+}
+.subMenu{
+    padding-left: 24px;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 34px;
+    margin: 4px 0 0 4px;
+}
+.icon__admin{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.content{
+    width: 100%;
+    background-color: indigo;
+}

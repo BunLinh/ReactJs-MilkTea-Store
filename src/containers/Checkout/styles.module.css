@@ -1,0 +1,34 @@
+.checkout_container{
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    box-shadow: 0 4px 5px #eee;
+}
+.order_title{
+    color: #d88282;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+.capital{
+    text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 700;
+}
+.txt_thank{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #d88282;
+    text-align: center;
+}
+.money{
+    font-size: 16px;
+  font-weight: bolder;
+  color: #d88282;
+}
+.txt_delivery{
+    margin-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #d88282;
+}

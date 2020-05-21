@@ -1,0 +1,18 @@
+.menu{
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    /* flex-flow: column; */
+  
+}
+img{
+  width: 25px;
+  height: 25px;
+  margin:0 10px 7px;
+}
+@media (min-width: 499px) {
+    .menu {
+      flex-flow: row;
+    }
+  }
