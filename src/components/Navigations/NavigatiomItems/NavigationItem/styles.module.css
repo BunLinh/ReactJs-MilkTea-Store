@@ -9,6 +9,8 @@
   color: #8f82c2;
   text-decoration: none;
   width: 100%;
+  border-radius: 2px;
+  
   box-sizing: border-box;
   display: block;
 }

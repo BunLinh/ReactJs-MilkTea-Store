@@ -1,11 +1,11 @@
 import { call, put } from 'redux-saga/effects';
 
-import { purchaseBugerService, fetchOrdersService } from '../../services/order';
+import { purchaseMilkTeaService, fetchOrdersService } from '../../services/order';
 import { getCookie } from '../../utils/cookies';
 import { COOKIE_EMAIL, COOKIE_TOKEN } from '../../constants';
 import * as actions from '../actions';
 
-export function* purchaseBurger({ payload }) {
+export function* purchaseMilkTea({ payload }) {
     const token = yield getCookie(COOKIE_TOKEN);
     const userId = yield getCookie(COOKIE_EMAIL);
     const params = {
@@ -14,11 +14,11 @@ export function* purchaseBurger({ payload }) {
         userId,
     };
     try {
-        const response = yield call(purchaseBugerService, params);
-        // yield put(actions.initIngredients());
+        const response = yield call(purchaseMilkTeaService, params);
+        yield put(actions.initIngredients());
         yield put(fetchOrders(response));
     } catch (error) {
-        yield put(actions.purchaseBurgerFailed(error))
+        yield put(actions.purchaseMilkTeaFailed(error))
     }
 }
 //call all order

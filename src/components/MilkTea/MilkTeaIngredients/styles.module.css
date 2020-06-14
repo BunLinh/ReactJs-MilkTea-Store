@@ -1,22 +1,23 @@
 .breadBottom{
     height: 60%;
-    /* width: 80%; */
+    width: 100%;
     /* background: linear-gradient(#F08E4A, #e27b36);
     border-radius: 0 0 30px 30px;
-    box-shadow: inset -15px 0 #c15711;
-    margin: 2% auto; */
+    box-shadow: inset -15px 0 #c15711;*/
+    margin: 2% auto; 
     background-image: url(../../../assets/images/teaBottom.svg);
-
+    background-repeat: no-repeat;
 }
 .breadTop{
-    height: 30%;
+    height: 25%;
     /* width: 80%; */
     /* background: linear-gradient(#bc581e, #e27b36);
     border-radius: 50% 50% 0 0;
-    box-shadow: inset -15px 0 #c15711;
-    margin: 2% auto;
-    position: relative; */
+    box-shadow: inset -15px 0 #c15711;*/
+    /* margin: 2% auto; */
+    position: relative; 
     background-image: url(../../../assets/images/tea.svg);
+    background-repeat: no-repeat;
 }
 .seeds1{
     width: 10%;

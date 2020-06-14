@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Modal } from 'antd';
 
 import configAxios from '../../utils/axios-order';
-import Burger from '../../components/Burger';
-import BurgerControls from '../../components/Burger/BurgerControls';
-import OrderSummary from '../../components/Burger/OrderSummary';
+import MilkTea from '../../components/MilkTea';
+import MilkTeaControls from '../../components/MilkTea/MilkTeaControls';
+import OrderSummary from '../../components/MilkTea/OrderSummary';
 
 import * as actions from '../../store/actions';
 import withErrorHandler from '../../hoc/WithErrorHandler';
@@ -15,19 +15,19 @@ import Pearls from '../../assets/images/pearl.png';
 
 const axios = configAxios();
 
-export const BurgerBuilder = (props) => {
+export const MilkTeaBuilder = (props) => {
   const [purchasing, setPurchasing] = useState(false);
   const dispatch = useDispatch();
 
   //get state in reducer/index
   const ings = useSelector((state) => {
-    // console.log(state.burgerBuidler.ingredients);
+    // console.log(state.MilkTeaBuidler.ingredients);
     
-    return state.burgerBuidler.ingredients;
+    return state.milkTeaBuidler.ingredients;
   });
   //get state in reducer/index
   const totalPrice = useSelector((state) => {
-    return state.burgerBuidler.totalPrice;
+    return state.milkTeaBuidler.totalPrice;
     // return state.burgerBuilder.totalPrice;
   });
   const isAuthenticated = useSelector((state) => {
@@ -40,7 +40,7 @@ export const BurgerBuilder = (props) => {
 
   const { history } = props;
 
-  //update price when u chose buger and ingredients
+  //update price when u chose milkTea and ingredients
   const updatePurchaseState = (ingredients) => {
     const sum = Object.keys(ingredients)
       .map((igKey) => {
@@ -77,10 +77,10 @@ export const BurgerBuilder = (props) => {
   }
 
   let orderSummary = null;
-  let burger;
+  let milkTea;
 
   if (ings) {
-    burger = (
+    milkTea = (
       <React.Fragment>
         <div
           style={{
@@ -96,17 +96,17 @@ export const BurgerBuilder = (props) => {
             flexDirection: 'row',
           }}>
             <img style={{
-              width: '30%',
-              height: '100%'
+              width: '20%',
+              height: '80%'
             }} src={RedTea} />
-            <Burger ingredients={ings} />
+            <MilkTea ingredients={ings} />
             <img style={{
-              width: '30%',
-              height: '100%'
+              width: '20%',
+              height: '80%'
             }} src={RedTea} />
           </div> 
           <div style={{ marginTop: 'auto' }}>
-            <BurgerControls
+            <MilkTeaControls
               ingredientAdded={onIngredientAdded}
               ingredientRemoved={onIngredientRemoved}
               disabled={disableInfo}
@@ -134,9 +134,9 @@ export const BurgerBuilder = (props) => {
       >
         {orderSummary}
       </Modal>
-      <div>{burger}</div>
+      <div>{milkTea}</div>
     </React.Fragment>
   );
 };
 
-export default withErrorHandler(BurgerBuilder, axios);
+export default withErrorHandler(MilkTeaBuilder, axios);

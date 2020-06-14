@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 
-import { iniIngredientService } from '../../services/burgerBuilder';
+import { iniIngredientService } from '../../services/milkTeaBuilder';
 import * as actions from '../actions';
 
 export function* initIngredients() {

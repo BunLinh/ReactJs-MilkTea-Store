@@ -17,7 +17,7 @@ export const INGREDIENT_PRICE = {
 };
 
 const addIngredient = (state, action) => {
-  debugger
+  // debugger
   const updateIngredient = {
     [action.ingredientName]: state.ingredients[action.ingredientName] + 1,
   };

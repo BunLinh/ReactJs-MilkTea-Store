@@ -33,7 +33,7 @@ const mapStateToProps = (state) => ({
   error: state.auth.error,
   isAuthenticated: !!state.auth.token,
   //tra ve boolean true or false
-  buildingBurger: state.burgerBuidler.building,
+  buildingBurger: state.milkTeaBuidler.building,
   authRedirectPath: state.auth.authRedirectPath,
   isSignupSuccess: state.auth.isSignupSuccess,
 });

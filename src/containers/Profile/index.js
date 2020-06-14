@@ -45,7 +45,7 @@ const Profile = (props) => {
     return (
         <div className={classes.form__container}>
             <p className={classes.title__profile}>Welcome <span style={{ fontWeight: '500', color: 'blue' }}>
-                {fullName || 'you'} to my Buger profile
+                {fullName || 'you'} to my MilkTea profile
             </span></p>
             <Skeleton loading={props.loading}>
                 <Row gutter={32} style={{ marginTop: '20px' }}>

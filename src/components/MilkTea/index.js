@@ -1,20 +1,20 @@
 import React from 'react';
 
 import classes from './styles.module.css';
-import BurgerIngredient from './BurgerIngredients';
+import MilkTeaIngredients from './MilkTeaIngredients';
 
-const Burger = (props) => {
+const MilkTea = (props) => {
   if (!props.ingredients) return null;
   let transformedIngredients = Object.keys(props.ingredients)
     .map((igKey) => {
       // console.log(props.ingredients + '------');
       
       const number = props.ingredients[igKey];
-      const listBurgerIngredient = [];
+      const listMilkTeaIngredient = [];
       for (let el = 1; el <= number; el += 1) {
-        listBurgerIngredient.push(<BurgerIngredient key={igKey + el} type={igKey} />);
+        listMilkTeaIngredient.push(<MilkTeaIngredients key={igKey + el} type={igKey} />);
       }
-      return listBurgerIngredient;
+      return listMilkTeaIngredient;
     })
     .reduce((arr, el) => {
       return arr.concat(el);
@@ -25,11 +25,11 @@ const Burger = (props) => {
   
   return (
     <div className={classes.burger}>
-      <BurgerIngredient type='bread-top' />
+      <MilkTeaIngredients type='bread-top' />
       {transformedIngredients}
-      <BurgerIngredient type='bread-bottom' />
+      <MilkTeaIngredients type='bread-bottom' />
     </div>
   );
 };
 
-export default Burger;
+export default MilkTea;

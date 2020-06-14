@@ -2,9 +2,9 @@ import { takeEvery, all, takeLatest } from 'redux-saga/effects';
 
 import * as actionTypes from '../actions/actionTypes';
 import { logout, checkAuthTimeout, authUser, authCheckState } from './auth';
-import { initIngredients } from './burgerBuider';
+import { initIngredients } from './milkTeabuilder';
 import { getProfile, updateProfileUser } from './profile';
-import { purchaseBurger, fetchOrders } from './order';
+import { purchaseMilkTea, fetchOrders } from './order';
 
 export function* watchAuth() {
   yield all([
@@ -15,12 +15,12 @@ export function* watchAuth() {
   ]);
 }
 
-export function* watchBurger() {
+export function* watchMilkTea() {
   yield takeEvery(actionTypes.INIT_INGREDIENTS, initIngredients);
 }
 
 export function* watchOrder() {
-  yield takeLatest(actionTypes.PURCHASE_BUGER,purchaseBurger);
+  yield takeLatest(actionTypes.PURCHASE_MILKTEA,purchaseMilkTea);
   yield takeEvery(actionTypes.FETCH_ORDER, fetchOrders);
 }
 

@@ -17,13 +17,13 @@ export {
     setIngredients,
     fetchIngredientsFailed,
     initIngredients
-} from './burgerBuilder';
+} from './milkTeaBuilder';
 
 export {
     purchaseInit,
-    purchaseBuger,
-    purchaseBurgerSuccess,
-    purchaseBurgerFailed,
+    purchaseMilkTea,
+    purchaseMilkTeaSuccess,
+    purchaseMilkTeaFailed,
     fetchOrderStart,
     fetchOrder,
     fetchOrderFail,

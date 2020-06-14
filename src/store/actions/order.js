@@ -6,22 +6,22 @@ export const purchaseInit = () => {
     };
 };
 
-export const purchaseBuger = (payload) => {
+export const purchaseMilkTea = (payload) => {
     return {
-        type: actionTypes.PURCHASE_BUGER,
+        type: actionTypes.PURCHASE_MILKTEA,
         payload
     };
 };
-export const purchaseBurgerSuccess = (id, orderData) => {
+export const purchaseMilkTeaSuccess = (id, orderData) => {
     return {
-        type: actionTypes.PURCHASE_BUGER_SUCCESS,
+        type: actionTypes.PURCHASE_MILKTEA_SUCCESS,
         orderId: id,
         orderData,
     }
 }
-export const purchaseBurgerFailed = (error) => {
+export const purchaseMilkTeaFailed = (error) => {
     return {
-        type: actionTypes.PURCHASE_BUGER_FAILED,
+        type: actionTypes.PURCHASE_MILKTEA_FAILED,
         error,
     }
 }

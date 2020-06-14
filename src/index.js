@@ -8,19 +8,19 @@ import createSagaMiddleware from 'redux-saga';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import authReducer from './store/reducers/auth';
-import burgerBuidlerReducer from './store/reducers/burger';
+import milkTeaBuidlerReducer from './store/reducers/milkTea';
 import orderReducer from './store/reducers/order';
 import profileReducer from './store/reducers/profile';
 
 import './index.css';
-import { watchAuth, watchBurger, watchOrder, watchProfile } from './store/sagas';
+import { watchAuth, watchMilkTea, watchOrder, watchProfile } from './store/sagas';
 
 const devConfig =
   process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null;
 const composeEnhancers = devConfig || compose;
 const rootReducer = combineReducers({
   auth: authReducer,
-  burgerBuidler: burgerBuidlerReducer,
+  milkTeaBuidler: milkTeaBuidlerReducer,
   order : orderReducer,
   profile : profileReducer,
 })
@@ -30,7 +30,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(watchAuth);
-sagaMiddleware.run(watchBurger);
+sagaMiddleware.run(watchMilkTea);
 sagaMiddleware.run(watchOrder);
 sagaMiddleware.run(watchProfile);
 

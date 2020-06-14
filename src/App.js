@@ -9,8 +9,8 @@ import { getCookie } from './utils/cookies';
 import * as actions from './store/actions';
 import Layout from './hoc/Layout';
 import Spinner from './components/UI/Spinner';
-import BurgerIngredient from './components/Burger/BurgerIngredients';
-import BurderControls from './components/Burger/BurgerControls';
+import MilkTeaIngredient from './components/MilkTea/MilkTeaIngredients';
+import MilkTeaControls from './components/MilkTea/MilkTeaControls';
 
 
 const Admin = React.lazy(() => {
@@ -19,8 +19,8 @@ const Admin = React.lazy(() => {
 const Auth = React.lazy(() => {
   return import('./containers/Auth');
 })
-const Burger = React.lazy(() => {
-  return import('./containers/Burger');
+const MilkTea = React.lazy(() => {
+  return import('./containers/MilkTea');
 })
 const Checkout = React.lazy(() => {
   return import('./containers/Checkout');
@@ -48,37 +48,36 @@ const App = (props) => {
 
   let routes;
   if (props.isAuthenticated) {
-    if (props.role === 1) {
-      routes = (
-        <Switch>
-          {/* <Route path='admin' render={(props) => <Admin {...props} />} /> */}
-          <Route path='/auth' render={(props) => <Auth {...props} />} />
-          <Route path='/profile' render={(props) => <Profile {...props} />} />
-
-        </Switch>
-      )
-    }
-    else {
+    // if (props.role === 1) {
+    //   routes = (
+    //     <Switch>
+    //       {/* <Route path='admin' render={(props) => <Admin {...props} />} /> */}
+    //       <Route path='/auth' render={(props) => <Auth {...props} />} />
+    //       <Route path='/profile' render={(props) => <Profile {...props} />} />
+    //     </Switch>
+    //   )
+    // }
+    // else {
       routes = (
         <Switch>
           <Route path='/checkout' render={(props) => <Checkout {...props} />} />
           <Route path='/auth' render={(props) => <Auth {...props} />} />
           <Route path='/order' render={(props) => <Order {...props} />} />
           <Route path='/profile' render={(props) => <Profile {...props} />} />
-          <Route path='/' exact component={Burger} />
+          <Route path='/' exact component={MilkTea} />
           <Redirect to='/' />
         </Switch>
       )
-    }
+    // }
   } else {
     routes = (
       <Switch>
-        <Route path='/admin' exact component={Admin} />
+        {/* <Route path='/admin' exact component={Admin} /> */}
         <Route path='/auth' render={(props) => <Auth {...props} />} />
         {/* //de kiem tra UI thu */}
         {/* <Route path='/order' render={(props) => <Order {...props} />} /> */}
         {/* <Route path='/profile' render={(props) => <Profile {...props} />} /> */}
-        <Route path='/' exact component={Burger} />
+        <Route path='/' exact component={MilkTea} />
         <Route component={NotFound} />
       </Switch>
     )

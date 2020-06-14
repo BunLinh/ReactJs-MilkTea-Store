@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-import BuildControl from './BurgerControl';
+import BuildControl from './MilkTeaControl';
 import classes from './styles.module.css';
 import ChanChau from '../../../assets/images/chanchau.jpg';
 import Aloe from '../../../assets/images/aloe.jpg';

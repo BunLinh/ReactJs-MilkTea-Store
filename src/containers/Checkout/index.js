@@ -5,7 +5,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons';
 
 import * as actionTypes from '../../store/actions';
 import classes from './styles.module.css';
-import { INGREDIENT_PRICE } from '../../store/reducers/burger';
+import { INGREDIENT_PRICE } from '../../store/reducers/milkTea';
 
 const Checkout = (props) => {
   
@@ -121,18 +121,18 @@ const Checkout = (props) => {
         </div>
     )
 }
-// hoac dung useSelector giong trong ./container/buger
+// hoac dung useSelector giong trong ./container/MilkTea
 const mapStateToProps = (state) => {
     return {
-        ings: state.burgerBuidler.ingredients,
-        totalPrice: state.burgerBuidler.totalPrice,
+        ings: state.milkTeaBuidler.ingredients,
+        totalPrice: state.milkTeaBuidler.totalPrice,
         address: state.profile.profile.address
 
     }
 }
 const mapDispatchToProps = (dispatch) => ({
     onInitPurchase: () => dispatch(actionTypes.purchaseInit()),
-    onOrderBurger: (payload) => dispatch(actionTypes.purchaseBuger(payload)),
+    onOrderBurger: (payload) => dispatch(actionTypes.purchaseMilkTea(payload)),
     onInitIngredients: () => dispatch(actionTypes.initIngredients())
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

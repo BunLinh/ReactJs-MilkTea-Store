@@ -2,7 +2,7 @@ import configAxios from '../utils/axios-order';
 
 const axios = configAxios();
 
-export const purchaseBugerService = (params) =>{
+export const purchaseMilkTeaService = (params) =>{
     const { token, ...restParams } = params;
     return axios.post(`/order.json?auth=${token}`, restParams);
 }

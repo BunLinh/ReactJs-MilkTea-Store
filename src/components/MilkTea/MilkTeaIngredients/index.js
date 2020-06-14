@@ -19,7 +19,7 @@ const BurgerIngredient = (props) => {
       );
       break;
     case 'pudding':
-      debugger
+      
       ingredient = <div className={classes.meat}></div>;
       break;
     case 'aloe':
